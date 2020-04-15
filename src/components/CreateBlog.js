@@ -98,6 +98,6 @@ class CreateBlog extends Component {
 
 CreateBlog.propTypes = {
     handleCreateBlogSubmit: PropTypes.func,
-}
+};
 
 export default CreateBlog;

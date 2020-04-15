@@ -16,6 +16,6 @@ const search = (props) => (
 search.propTypes = {
     handleChange: PropTypes.func,
     searchTerm: PropTypes.string
-}
+};
 
 export default search;

@@ -35,8 +35,6 @@ class App extends Component {
         axios.delete(`/blog/${id}`).then(() => {
             this.loadBlogs();
         });
-        // const updatedBlog = this.state.blogs.filter((blog) => blog._id !== id);
-        // this.setState({ blogs: updatedBlog});
     };
 
     onUpdate = (id) => {

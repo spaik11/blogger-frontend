@@ -16,6 +16,6 @@ button.propTypes = {
     style: PropTypes.object,
     className: PropTypes.string,
     type: PropTypes.string.isRequired
-}
+};
 
 export default button;

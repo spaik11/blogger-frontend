@@ -101,6 +101,6 @@ UpdateBlog.propTypes = {
         article: PropTypes.string.isRequired,
         _id: PropTypes.string.isRequired
     })
-}
+};
 
 export default UpdateBlog;
