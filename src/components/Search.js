@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const search = (props) => (
     <form className="ui form">
@@ -11,5 +12,10 @@ const search = (props) => (
         </div>
     </form>
 );
+
+search.propTypes = {
+    handleChange: PropTypes.func,
+    searchTerm: PropTypes.string
+}
 
 export default search;

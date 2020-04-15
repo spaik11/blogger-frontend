@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 class CreateBlog extends Component {
@@ -94,5 +95,9 @@ class CreateBlog extends Component {
         );
     }
 };
+
+CreateBlog.propTypes = {
+    handleCreateBlogSubmit: PropTypes.func,
+}
 
 export default CreateBlog;

@@ -4,7 +4,6 @@ import Search from './Search';
 import CreateBlog from './CreateBlog';
 import Blogs from './Blogs';
 import UpdateBlog from './UpdateBlog';
-// import blogs from '../data/data';
 
 class App extends Component {
     state = {
@@ -59,9 +58,7 @@ class App extends Component {
 
         axios.post('/blog', blog, axiosConfig).then(() => {
             this.loadBlogs();
-        })
-        // let updatedBlogs = [blog, ...this.state.blogs];
-        // this.setState({ blogs: updatedBlogs });
+        });
     };
 
     handleUpdateBlogSubmit = (event, blog, id) => {
@@ -84,7 +81,6 @@ class App extends Component {
     };
 
     render() {
-        console.log('Blogs...', this.state.blog);
         let toggleComponent = this.state.toggle 
             ? <CreateBlog handleCreateBlogSubmit={this.handleCreateBlogSubmit}/> 
             : <UpdateBlog handleUpdateBlogSubmit={this.handleUpdateBlogSubmit} blog={this.state.blog}/>;
@@ -106,7 +102,7 @@ class App extends Component {
                     searchTerm={this.state.searchTerm}
                     onDelete={this.onDelete}
                     onUpdate={this.onUpdate}
-                    toggle={this.state.toggle}/>
+                />
             </div>
         );
     };

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 class UpdateBlog extends Component {
@@ -90,5 +91,16 @@ class UpdateBlog extends Component {
         );
     };
 };
+
+UpdateBlog.propTypes = {
+    handleUpdateBlogSubmit: PropTypes.func,
+    blog: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        subject: PropTypes.string.isRequired,
+        article: PropTypes.string.isRequired,
+        _id: PropTypes.string.isRequired
+    })
+}
 
 export default UpdateBlog;

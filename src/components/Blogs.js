@@ -15,14 +15,12 @@ const blogs = (props) => {
 };
 
 blogs.propTypes = {
-    toggle: PropTypes.bool,
     blogs: PropTypes.arrayOf(
         PropTypes.shape({
             author: PropTypes.string.isRequired,
-            title: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
             subject: PropTypes.string.isRequired,
-            article: PropTypes.string.isRequired,
-            _id: PropTypes.string.isRequired
+            article: PropTypes.string.isRequired
         })
     )
 };
